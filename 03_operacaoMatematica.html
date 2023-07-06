@@ -8,11 +8,32 @@
     */
 
     //ENTRADA
-
-
+    const num1 = Number(prompt("Informe um número inteiro:").trim().replace(",","."));
+    const num2 = Number(prompt("Informe outro número inteiro:").trim().replace(",","."));
+    const operacao = prompt("Informe qual operação deseja realizar (Multiplicação *, divisão /, soma + e subtração -):").trim();
+    let conta = 0 ;
     //PROCESSAMENTO
-
-    
+    switch (num1 && num2) {
+        case "*":
+            conta = num1 * num2;
+            break;
+        case "/":
+            conta = num1 / num2;
+            break;
+        case "+":
+            conta = num1 + num2;
+            break;
+        case "-":
+            conta = num1 - num2;
+            break;
+        default:
+            document.write("Informe valores e os símbolos de operação válidos!!");
+            break;
+    }
+    switch (conta % 2 && Number.isInteger(conta)) {
+        case 0:
+             
+    }
     //SAÍDA
 
 </script>

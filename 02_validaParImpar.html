@@ -5,11 +5,20 @@
     */
 
     //ENTRADA
-
-    
+    const num = Number(prompt("Informe um núme intriro"));   
     //PROCESSAMENTO
-
-    
+    switch (num % 2 ) {
+        case 0:
+            document.write("Ele é par.");
+            break;
+        case 1:
+            document.write("Ele é ímpar.");
+            break;
+        default:
+            document.write("Valor inválido");
+            break;
+        
+    }
     //SAÍDA
 
 </script>
