@@ -8,10 +8,30 @@
     // - cães grandes: fator 7.
 
     // ENTRADA
-
-    
+    let anos = Number(prompt(`Informe a idade de seu cão`).trim().replace(",","."));
+    const porte = prompt(`Qual o porte de seu cão? (Responda com P para pequeno, M para médio e G para grande)`).trim().toLowerCase();
     // PROCESSAMENTO
-
+    switch (porte) {
+        case "p":
+        case "pequeno":
+            anos = anos *5;
+            document.write(`Seu cachorro tem ${anos} anos de idade`);
+            break;
+        case "m":
+        case "médio":
+            anos = anos * 6;
+            document.write(`Seu cachorro tem ${anos} anos de idade`);
+            break;
+        case "g":
+        case "grande":
+            anos = anos * 7;
+            document.write(`Seu cachorro tem ${anos} anos de idade`);
+            break;
+        default:
+            alert("Porte ou idade inválida!!");
+            break;
+    }
+   
     
     // SAÍDA
 

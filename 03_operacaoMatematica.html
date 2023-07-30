@@ -8,12 +8,12 @@
     */
 
     //ENTRADA
-    const num1 = Number(prompt("Informe um número inteiro:").trim().replace(",","."));
-    const num2 = Number(prompt("Informe outro número inteiro:").trim().replace(",","."));
+    const num1 = Number(prompt("Informe um número inteiro:").trim().replace(",", "."));
+    const num2 = Number(prompt("Informe outro número inteiro:").trim().replace(",", "."));
     const operacao = prompt("Informe qual operação deseja realizar (Multiplicação *, divisão /, soma + e subtração -):").trim();
-    let conta = 0 ;
+    let conta = 0;
     //PROCESSAMENTO
-    switch (num1 && num2) {
+    switch (operacao) {
         case "*":
             conta = num1 * num2;
             break;
@@ -30,10 +30,39 @@
             document.write("Informe valores e os símbolos de operação válidos!!");
             break;
     }
-    switch (conta % 2 && Number.isInteger(conta)) {
+    switch (conta % 2 && Number.isInteger(conta) && conta >= 0) {
         case 0:
-             
+            document.write(`O número ${conta.toFixed(2).replace(".",",")}  é positivo, inteiro e par`);
+            break;
+        case !0:
+            document.write(`O número ${conta.toFixed(2).replace(".",",")} é positivo, inteiro e ímpar`);
+            break;
     }
+    switch (conta % 2 && !Number.isInteger(conta) && conta >= 0) {
+        case 0:
+            document.write(`O número ${conta.toFixed(2).replace(".",",")} é positivo, decimal e par`);
+            break;
+        case !0:
+            document.write(`O número ${conta.toFixed(2).replace(".",",")} é positivo, decimal e ímpar`);
+            break;
+    }
+    switch (conta % 2 && !Number.isInteger(conta) && conta < 0) {
+        case 0:
+            document.write(`O número ${conta.toFixed(2).replace(".",",")} é negativo, decimal e par`);
+            break;
+        case !0:
+            document.write(`O número ${conta.toFixed(2).replace(".",",")} é negativo, decimal e ímpar`);
+            break;
+    }
+    switch (conta % 2 && Number.isInteger(conta) && conta < 0) {
+        case 0:
+            document.write(`O número ${conta.toFixed(2).replace(".",",")} é positivo, decimal e par`);
+            break;
+        case !0:
+            document.write(`O número ${conta.toFixed(2).replace(".",",")} é positivo, decimal e ímpar`);
+            break;
+    }
+
     //SAÍDA
 
 </script>

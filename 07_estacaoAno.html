@@ -6,11 +6,71 @@
     */
 
     //ENTRADA
-
-    
+    const hemisfério = prompt("Informe em qual hemisfério está:").toLocaleLowerCase().trim();
+    const mês = Number(prompt("Informe em qual mês está (Responda com número como janeiro = 1):").trim());
     //PROCESSAMENTO
+    switch (hemisfério) {
+        case "sul":
+        case "s":
+            switch (mês) {
+                case 1:
+                case 2:
+                case 3:
+                    document.write("É verão.");
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    document.write("É outono.");
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    document.write("É inverno.");
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    document.write("É primavera.");
+                    break;
+                default:
+                    alert("Mês inválido!!");
+                    break;
+            }
+            break;
+        case "norte":
+        case "n":
+            switch (mês) {
+                case 1:
+                case 2:
+                case 3:
+                    document.write("É inverno.");
+                    break;
+                case 4:
+                case 5:
+                case 6:
+                    document.write("É primavera.");
+                    break;
+                case 7:
+                case 8:
+                case 9:
+                    document.write("É verão.");
+                    break;
+                case 10:
+                case 11:
+                case 12:
+                    document.write("É outono.");
+                    break;
+                default:
+                    alert("Mês inválido!!");
+                    break;
+            }
+            break;
+        default:
+            alert(`Hemisfério inválido.`);
+            break;
 
-
+    }
     //SAÍDA
 
 </script>

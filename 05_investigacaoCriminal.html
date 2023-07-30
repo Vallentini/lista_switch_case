@@ -16,42 +16,56 @@
     const mora = prompt("Mora perto da vítima?").trim().toLowerCase();
     const devia = prompt("Devia para a vítima?").trim().toLowerCase();
     const trabalhou = prompt("Já trabalhou com a vítima?").trim().toLowerCase();
-    //PROCESSAMENTO
     let pontos = 0;
-    switch (Telefonou && local && mora && devia && trabalhou ) {
-        case "sim": 
-            pontos+1;
+    //PROCESSAMENTO
+    switch (Telefonou) {
+        case "s":
+        case "sim":
+            pontos = pontos + 1;
             break;
-        case "sim": 
-            pontos+1;
+
+    }
+    switch (local) {
+        case "s":
+        case "sim":
+            pontos = pontos + 1;
             break;
-        case "sim": 
-            pontos+1;
-            break;
-        case "sim": 
-            pontos+1;
-            break;
-        case "sim": 
-            pontos+1;
-            break;
-        
     }
 
-    switch (pontos) {
-       case 2: pontos
-            document.write("Suspeita.");
+    switch (mora) {
+        case "s":
+        case "sim":
+            pontos = pontos + 1;
+            break;
+    }
+
+    switch (devia) {
+        case "s":
+        case "sim":
+            pontos = pontos + 1;
+            break;
+    }
+
+    switch (trabalhou) {
+        case "s":
+        case "sim":
+            pontos = pontos + 1;
+            break;
+    }
+    //SAÍDA
+     switch(pontos) {
+        case 2:
+            document.write("SUSPEITO");
             break;
         case 3:
         case 4:
-            document.write("Cúmplice.");
+            document.write("CÙMPLICE");
             break;
-        case 5:
-            document.write("Assassino.");
+        case 5://///////////////
+            document.write("ASSASSINO");
             break;
         default:
-            document.write("Inocente");
-            break; 
-    }
-    //SAÍDA
-
+            document.write("INOCENTE");
+            break;
+     }
 </script>
